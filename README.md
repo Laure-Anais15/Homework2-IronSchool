@@ -9,7 +9,7 @@ It manages Teachers, Courses, and Students, and supports several commands throug
 
 - JoseSaa12 → Persona 1 (Teacher, Course, Student classes)
 - Laure-Anais15 → Persona 2
-- [Nombre del tercer compañero] → Persona 3
+- Victor → Persona 3
 
 ## How to run the project
 
