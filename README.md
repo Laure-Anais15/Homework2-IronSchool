@@ -7,9 +7,9 @@ It manages Teachers, Courses, and Students, and supports several commands throug
 
 ## Contributors
 
-- JoseSaa12 → Persona 1 (Teacher, Course, Student classes)
-- Laure-Anais15 → Persona 2
-- Victor → Persona 3
+- JoseSaa12 → parte 1 (Teacher, Course, Student classes)
+- Laure-Anais15 → parte 2
+- Victor → parte 3
 
 ## How to run the project
 
