@@ -1,15 +1,12 @@
-import java.util.Scanner;
-
-
-//!! modif class and method names
-
+package school;
+import school.model.*;
+import school.controller.SchoolService;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-
-    }
-        Scanner scanner = new Scanner (System.in);
-        SchoolService schoolService = New SchoolService();
+        Scanner scanner = new Scanner(System.in);
+        SchoolService schoolService = new SchoolService();
 
         /* ask for school name*/
         System.out.print("School name: ");
@@ -17,7 +14,7 @@ public class Main {
 
         /* create teachers*/
         System.out.print("How many teachers? ");
-        int nbTeachers = Integer.parseInt(scanner.nextLine();
+        int nbTeachers = Integer.parseInt(scanner.nextLine());
 
         for (int i = 0; i < nbTeachers; i++){
             System.out.println("Teacher " + (i + 1));
@@ -63,34 +60,47 @@ public class Main {
         }
 
         /* menu*/
-
+        System.out.println("\nIntroduce cualquier opción (ENROLL, ASSIGN, SHOW, LOOKUP, SHOWPROFIT, EXIT): ");
         while (true){
-            System.out.print("Command > ");
-            String input = scanner.nextLine();
+            System.out.print("\nCommand > ");
+            String input = scanner.nextLine().trim();
             String[] parts = input.split(" ");
 
             try{
-                System.out.println("Commande reçue : " + Arrays.toString(parts));//pour verifier les arguments
-                switch (parts[0]) {
+                switch (parts[0].toUpperCase()) {
                     case "ENROLL":
+                        if (parts.length < 3) {
+                            System.out.println("Usage: ENROLL [STUDENT_ID] [COURSE_ID]");
+                            break;
+                        }
                         schoolService.enrollStudent(parts[1], parts[2]);
                         break;
                     case "ASSIGN":
+                        if (parts.length < 3) {
+                            System.out.println("Usage: ASSIGN [TEACHER_ID] [COURSE_ID]");
+                            break;
+                        }
                         schoolService.assignTeacher(parts[1], parts[2]);
                         break;
                     case "SHOW":
-                        //remplir
+                        schoolService.handleShowCommand(parts);
                         break;
                     case "LOOKUP":
-                        //remplir
+                        schoolService.handleLookupCommand(parts);
+                        break;
+                    case "SHOWPROFIT":
+                        double profit = schoolService.calculateProfit();
+                        System.out.printf("Total profit: %.2f€\n", profit);
                         break;
                     case "EXIT":
-                        return; // Sortie propre
+                        System.out.println("Goodbye!");
+                        return;
                     default:
-                        System.out.println("Unknown command");
+                        System.out.println("Unknown command.");
                 }
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
             }
         }
+    }
 }
