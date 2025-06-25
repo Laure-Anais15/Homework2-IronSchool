@@ -7,9 +7,9 @@ It manages Teachers, Courses, and Students, and supports several commands throug
 
 ## Contributors
 
-- JoseSaa12 → parte 1 (Teacher, Course, Student classes)
-- Laure-Anais15 → parte 2
-- Victor → parte 3
+- JoseSaa12 → Main
+- Laure-Anais15 → Model & Testing
+- Victor → Controller & Model
 
 ## How to run the project
 
