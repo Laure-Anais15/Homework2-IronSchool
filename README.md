@@ -20,7 +20,7 @@ It manages Teachers, Courses, and Students, and supports several commands throug
 
 2. Open the project in IntelliJ IDEA.
 
-3. Compile and run the `Main` class to start the program.
+3. Compile and run the `school.Main` class to start the program.
 
 ## Features
 
