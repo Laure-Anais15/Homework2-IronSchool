@@ -25,6 +25,7 @@ public class Main {
 
             Teacher teacher = new Teacher(name, salary);
             schoolService.addTeacher(teacher);
+            System.out.println("Teacher " + teacher.getName() + " created with ID: " + teacher.getTeacherId());
         }
 
         /* create courses without teacher*/
@@ -40,6 +41,7 @@ public class Main {
 
             Course course = new Course(name, price);
             schoolService.addCourse(course);
+            System.out.println("Course " + course.getName() + " created with ID: " + course.getCourseId());
         }
 
         /* create students without course*/
@@ -57,10 +59,11 @@ public class Main {
 
             Student student = new Student(name, address, email);
             schoolService.addStudent(student);
+            System.out.println("Student " + student.getName() + " created with ID: " + student.getStudentId());
         }
 
         /* menu*/
-        System.out.println("\nIntroduce cualquier opción (ENROLL, ASSIGN, SHOW, LOOKUP, SHOWPROFIT, EXIT): ");
+        System.out.println("\nChoose an option (ENROLL, ASSIGN, SHOW, LOOKUP, SHOWPROFIT, EXIT): ");
         while (true){
             System.out.print("\nCommand > ");
             String input = scanner.nextLine().trim();

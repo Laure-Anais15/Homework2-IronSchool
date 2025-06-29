@@ -42,7 +42,7 @@ public class SchoolService {
     }
 
     public void handleShowCommand(String[] parts) {
-        if (parts.length < 2) throw new RuntimeException("Missing SHOW argument.");
+        if (parts.length < 2) throw new RuntimeException("Missing SHOW argument (TEACHERS/STUDENTS/COURSES).");
         switch (parts[1].toUpperCase()) {
             case "TEACHERS":
                 teachers.values().forEach(System.out::println);
@@ -59,7 +59,7 @@ public class SchoolService {
     }
 
     public void handleLookupCommand(String[] parts) {
-        if (parts.length < 3) throw new RuntimeException("Missing LOOKUP argument.");
+        if (parts.length < 3) throw new RuntimeException("Missing LOOKUP argument (LOOKUP TEACHER/STUDENT/COURSE + ID).");
         String id = parts[2];
         switch (parts[1].toUpperCase()) {
             case "TEACHER":
