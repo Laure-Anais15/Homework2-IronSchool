@@ -7,8 +7,8 @@ It manages Teachers, Courses, and Students, and supports several commands throug
 
 ## Contributors
 
-- JoseSaa12 → Main
-- Laure-Anais15 → Model & Testing
+- JoseSaa12 → Class 
+- Laure-Anais15 → Main & Testing
 - Victor → Controller & Model
 
 ## How to run the project
